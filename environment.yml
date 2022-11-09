@@ -1,0 +1,9 @@
+name: testEnv
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - moto
+  - boto
+  - pytest
+
