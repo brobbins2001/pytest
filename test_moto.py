@@ -24,7 +24,7 @@ def to_the_cloud(file_name, bucket, object_name=None):
         object_name = file_name
 
     # Upload the file
-    s3_client = boto3.Session(profile_name='default').client('s3')
+    s3_client = boto3.Session().client('s3')
     try:
         response = s3_client.upload_file(file_name, bucket, object_name)
         print(f'Upload Response: {response}')
